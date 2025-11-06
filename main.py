@@ -11,6 +11,8 @@ app = Flask(__name__)
 def home():
     return '''<h1>Welcome to the HTTP Status Codes Info Site</h1>
     <a href="/errors">View HTTP Status Codes</a>
+    <br>
+    <a href="/about">About</a>
     '''
 
 
@@ -24,7 +26,7 @@ def errors():
         <li><a href="/error/403">403 Forbidden</a></li>
         <li><a href="/error/404">404 Not Found</a></li>
     </ul>
-    <a href="/about">About this site</a>
+    <a href="/about">About</a>
     <br>
     <a href="/">Back</a>
     '''
@@ -32,8 +34,10 @@ def errors():
 @app.route('/about')
 def about():
     return '''
-    <h1>About This Site</h1>
+    <h1>About</h1>
     <p>This site provides information about common HTTP status codes.</p>
+    <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D0%BA%D0%BE%D0%B4%D0%BE%D0%B2_%D1%81%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%B8%D1%8F_HTTP">Information Source</a>
+    <br>
     <a href="/errors">View HTTP Status Codes</a>
     <a href="/">Back</a>
     '''
